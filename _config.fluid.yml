@@ -128,7 +128,7 @@ tab_title_separator: " - "
 
 # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
 # Force all links to be HTTPS (applicable to HTTP mixed error)
-force_https: false
+force_https: true
 
 
 # 代码块的增强配置
@@ -191,7 +191,7 @@ fun_features:
 
     # 游标字符
     # Cursor character
-    cursorChar: "_"
+    cursorChar: ""
 
     # 是否循环播放效果
     # If true, loop animation
@@ -591,11 +591,11 @@ index:
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
     api:
-      enable: false
+      enable: true
 
       # 请求地址
       # Request url
-      url: ""
+      url: "https://v1.hitokoto.cn/"
 
       # 请求方法
       # Request method
@@ -608,7 +608,7 @@ index:
 
       # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data', 'content']；如果返回是列表则自动选择第一项
       # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
-      keys: []
+      keys: ["hitokoto"]
 
   # 自动截取文章摘要
   # Auto extract post
@@ -678,12 +678,12 @@ post:
       awl: 2
       # 每分钟阅读字数，如果大部分是技术文章可适度调低
       # Words per minute
-      wpm: 60
+      wpm: 70
 
     # 浏览量计数
     # Number of visits
     views:
-      enable: false
+      enable: true
       # 统计数据来源
       # Data Source
       # Options: busuanzi | leancloud
